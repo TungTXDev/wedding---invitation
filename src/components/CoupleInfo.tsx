@@ -1,6 +1,6 @@
 function CoupleInfo() {
     return (
-        <div className="w-full py-8 px-6 text-center bg-gray-50">
+        <div className="w-full py-8 px-6 text-center">
             {/* GROOM & BRIDE - Nằm ngang */}
             <div className="flex justify-center items-start gap-6 md:gap-12 mb-6">
                 {/* GROOM */}
@@ -39,7 +39,7 @@ function CoupleInfo() {
             {/* Invitation Text */}
             <div className="mb-8">
                 <p className="text-lg text-gray-700 leading-relaxed mb-2">
-                    Gia đình chúng mình trân trọng kính mời
+                    Gia đình chúng tôi trân trọng kính mời
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed mb-2">
                     Quý vị đến dự lễ thành hôn của
@@ -68,7 +68,7 @@ function CoupleInfo() {
                     sẽ là niềm vinh hạnh và hạnh phúc lớn
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed">
-                    lao cho gia đình chúng mình.
+                    lao cho gia đình chúng tôi.
                 </p>
             </div>
 

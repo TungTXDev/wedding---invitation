@@ -39,7 +39,7 @@ function InvitationCard() {
 
                 {/* Event description */}
                 <p className="text-center text-sm md:text-base text-gray-500 italic mb-6">
-                    (Tới dự Lễ Thành Hôn của chúng mình)
+                    (Tới dự Lễ Thành Hôn của chúng tôi)
                 </p>
 
                 {/* Couple names with heart */}
@@ -110,14 +110,14 @@ function InvitationCard() {
 
                 {/* Footer message */}
                 <p className="text-center text-xs md:text-base text-gray-500 italic mb-6">
-                    Sự hiện diện của Quý khách là niềm vinh hạnh của gia đình chúng mình!
+                    Sự hiện diện của Quý khách là niềm vinh hạnh của gia đình chúng tôi!
                 </p>
 
-                {/* Decorative flowers */}
+                {/* Decorative double happiness */}
                 <div className="flex justify-center gap-2 md:gap-3">
-                    <span className="text-2xl md:text-3xl">🌸</span>
-                    <span className="text-2xl md:text-3xl">🌼</span>
-                    <span className="text-2xl md:text-3xl">🌸</span>
+                    <span className="text-2xl md:text-3xl text-red-800">囍</span>
+                    <span className="text-2xl md:text-3xl text-red-800">囍</span>
+                    <span className="text-2xl md:text-3xl text-red-800">囍</span>
                 </div>
             </div>
         </div>
