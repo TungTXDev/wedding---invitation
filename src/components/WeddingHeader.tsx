@@ -19,7 +19,7 @@ function WeddingHeader() {
       {/* Wedding Photo - Full width, sát mép */}
       <div>
         <img
-          src="/src/assets/images/DSC09369.jpg"
+          src="/images/DSC09369.jpg"
           alt="Wedding Photo"
           className="w-full rounded-lg"
         />

@@ -48,7 +48,7 @@ function Countdown() {
                 <div className="flex flex-col items-center">
                     <div className="w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden mb-3 shadow-lg">
                         <img
-                            src="/src/assets/images/DSC09362.jpg"
+                            src="/images/DSC09362.jpg"
                             alt="Chú rể"
                             className="w-full h-full object-cover"
                         />
@@ -68,7 +68,7 @@ function Countdown() {
                 <div className="flex flex-col items-center">
                     <div className="w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden mb-3 shadow-lg">
                         <img
-                            src="/src/assets/images/DSC09362.jpg"
+                            src="/images/DSC09362.jpg"
                             alt="Cô dâu"
                             className="w-full h-full object-cover"
                         />
@@ -135,7 +135,7 @@ function Countdown() {
 
             <div>
                 <img
-                    src="/src/assets/images/DSC09369.jpg"
+                    src="/images/DSC09369.jpg"
                     alt="Wedding Photo"
                     className="w-full"
                 />
