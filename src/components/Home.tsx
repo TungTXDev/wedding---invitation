@@ -23,7 +23,7 @@ function Home() {
 
           <CoupleInfo />
 
-          <div className="px-6">
+          <div className="px-1">
             {/* Invitation Card */}
             <InvitationCard />
           </div>
