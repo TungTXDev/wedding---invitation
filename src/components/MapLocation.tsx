@@ -1,6 +1,6 @@
 function MapLocation() {
-  const address = "Số 9, ngõ Bình Yên, xóm 3, Văn Trại, Thường Tín, Hà Nội";
-  const mapUrl = "https://maps.google.com/?q=20.5801,105.8542";
+  const address = "Tầng 2 Tasco Mall, 7-9 Nguyễn Văn Linh, Tổ 17, Long Biên, Hà Nội";
+  const mapUrl = "https://maps.app.goo.gl/Mey7n3omcdGrSpQ66";
 
   const handleOpenMap = () => {
     window.open(mapUrl, '_blank');
@@ -12,13 +12,13 @@ function MapLocation() {
         Địa điểm tổ chức
       </h2>
 
-      <p className="text-center text-lg font-semibold text-gray-800 mb-4">
-        Tại Gia Đình
+      <p className="text-center md:text-4xl text-lg font-semibold text-[#b5851d] mb-4">
+      Trống Đồng Palace
       </p>
 
       {/* Address */}
       <div className="mb-6">
-        <p className="text-center text-gray-700 text-base leading-relaxed">
+        <p className="text-center md:text-2xl text-gray-700 text-base leading-relaxed">
           {address}
         </p>
       </div>
