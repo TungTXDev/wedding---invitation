@@ -7,7 +7,11 @@ interface TimeLeft {
   seconds: number;
 }
 
-function Countdown() {
+interface CountdownProps {
+  selectedSide: "groom" | "bride";
+}
+
+function Countdown({ selectedSide }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -16,7 +20,10 @@ function Countdown() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2026-03-28T11:00:00").getTime();
+    // Nhà trai: 29/03/2026 10:30, Nhà gái: 28/03/2026 11:00
+    const targetDate = selectedSide === "groom"
+      ? new Date("2026-03-29T10:30:00").getTime()
+      : new Date("2026-03-28T11:00:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -40,7 +47,7 @@ function Countdown() {
     const interval = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [selectedSide]); // Thêm selectedSide vào dependency array
 
   const formatNumber = (num: number) => num.toString().padStart(2, "0");
 

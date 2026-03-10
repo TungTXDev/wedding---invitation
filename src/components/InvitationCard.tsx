@@ -305,7 +305,15 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
             className="text-lg md:text-2xl text-[#2f2f2f] tracking-wide uppercase"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}
           >
-            Được tổ chức vào lúc <span className="font-black">11 giờ 00</span>
+            {groomFirst ? (
+              <>
+                Vào lúc <span className="font-black">10 giờ 30</span>
+              </>
+            ) : (
+              <>
+                Được tổ chức vào lúc <span className="font-black">11 giờ 00</span>
+              </>
+            )}
           </p>
         </div>
 
@@ -319,13 +327,13 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                 fontWeight: 700,
               }}
             >
-              Thứ Bảy
+              {groomFirst ? "Chủ Nhật" : "Thứ Bảy"}
             </span>
             <div className="h-px w-12 md:w-16 lg:w-20 bg-[#2f2f2f] flex-shrink-0" />
           </div>
 
           <div className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-[#b5851d] font-black px-1 md:px-2 flex-shrink-0">
-            28.03
+            {groomFirst ? "29.03" : "28.03"}
           </div>
 
           <div className="flex flex-col items-center gap-1 md:gap-1.5 flex-shrink-0 mt-0 md:mt-2">
@@ -348,7 +356,10 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
             className="text-sm md:text-base text-[#2f2f2f] italic"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
           >
-            (Tức ngày 10 tháng 02 năm Bính Ngọ)
+            {groomFirst
+              ? "(Tức ngày 11 tháng 02 năm Bính Ngọ)"
+              : "(Tức ngày 10 tháng 02 năm Bính Ngọ)"
+            }
           </p>
         </div>
 
@@ -358,13 +369,19 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
             className="text-sm md:text-3xl text-[#b5851d] font-black uppercase"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Tại: Trống Đồng Palace
+            {groomFirst
+              ? "Tại: Tư gia nhà trai"
+              : "Tại: Trống Đồng Palace"
+            }
           </p>
           <p
-            className="text-base md:text-lg text-[#2f2f2f] mt-2 leading-relaxed"
+            className="text-base md:text-base text-[#2f2f2f] mt-2 leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
           >
-            Tầng 2 Tasco Mall, 7-9 Nguyễn Văn Linh, Tổ 17, Long Biên, Hà Nội
+            {groomFirst
+              ? "Tương Chúc, Nam Phù, Hà Nội"
+              : "Tầng 2 Tasco Mall, 7-9 Nguyễn Văn Linh, Tổ 17, Long Biên, Hà Nội"
+            }
           </p>
         </div>
 

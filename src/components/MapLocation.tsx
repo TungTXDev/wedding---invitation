@@ -1,6 +1,21 @@
-function MapLocation() {
-  const address = "Tầng 2 Tasco Mall, 7-9 Nguyễn Văn Linh, Tổ 17, Long Biên, Hà Nội";
-  const mapUrl = "https://maps.app.goo.gl/Mey7n3omcdGrSpQ66";
+interface MapLocationProps {
+  selectedSide: "groom" | "bride";
+}
+
+function MapLocation({ selectedSide }: MapLocationProps) {
+  const groomFirst = selectedSide === "groom";
+
+  const address = groomFirst
+    ? "Tương Chúc, Nam Phù, Hà Nội"
+    : "Tầng 2 Tasco Mall, 7-9 Nguyễn Văn Linh, Tổ 17, Long Biên, Hà Nội";
+
+  const venue = groomFirst
+    ? "Tư gia nhà trai"
+    : "Trống Đồng Palace";
+
+  const mapUrl = groomFirst
+    ? "https://maps.app.goo.gl/xv8xJuv9Q9kb11kX7" // Bạn cần thay thế bằng link map thực của nhà trai
+    : "https://maps.app.goo.gl/Mey7n3omcdGrSpQ66";
 
   const handleOpenMap = () => {
     window.open(mapUrl, '_blank');
@@ -13,12 +28,12 @@ function MapLocation() {
       </h2>
 
       <p className="text-center md:text-4xl text-lg font-semibold text-[#b5851d] mb-4">
-      Trống Đồng Palace
+        {venue}
       </p>
 
       {/* Address */}
       <div className="mb-6">
-        <p className="text-center md:text-2xl text-gray-700 text-base leading-relaxed">
+        <p className="text-center md:text-xl text-gray-700 text-base leading-relaxed">
           {address}
         </p>
       </div>

@@ -47,8 +47,8 @@ function SelectSide({ onSelect }: SelectSideProps) {
                 <img
                   src="/images/long.jpg"
                   alt="Chú rể"
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: "center 12%" }}
+                  className="w-full h-full object-cover scale-155"
+                  style={{ objectPosition: "center 2%" }}
                 />
               </div>
               <h2
@@ -113,19 +113,22 @@ function SelectSide({ onSelect }: SelectSideProps) {
             </div>
 
             <div className="text-center relative z-10">
-              <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform duration-300">
-                <img
-                  src="/images/mai.jpg"
-                  alt="Cô dâu"
-                  className="w-full h-full object-cover scale-145"
-                  style={{ objectPosition: "center 21%" }}
-                />
-              </div>
+           <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-full 
+bg-gradient-to-br from-pink-50 to-pink-100 
+flex items-center justify-center overflow-hidden">
+
+  <img
+    src="/images/img2.jpg"
+    alt="Cô dâu"
+    className="w-full h-full object-cover scale-[1.95] object-[70%_-19%]"
+  />
+
+</div>
               <h2
                 className="text-4xl md:text-5xl lg:text-6xl text-[#8b0102] mb-5"
                 style={{ fontFamily: "'Luxurious Script', cursive" }}
               >
-                Nhà gái
+                Nhà gái 
               </h2>
               <div className="bg-gray-50 rounded-2xl p-5 mb-5">
                 <div className="space-y-2">

@@ -1,12 +1,18 @@
 import { useState, useRef, useEffect } from 'react';
 
 function MusicPlayer() {
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true); 
     const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
         if (audioRef.current) {
             audioRef.current.volume = 0.5;
+            // Tự động phát nhạc khi component mount
+            audioRef.current.play().catch((error) => {
+                console.log('Auto-play was prevented:', error);
+                // Nếu auto-play bị chặn, đặt lại trạng thái
+                setIsPlaying(false);
+            });
         }
     }, []);
 

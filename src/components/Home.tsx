@@ -40,17 +40,17 @@ function Home({ selectedSide, onBack }: HomeProps) {
             <InvitationCard selectedSide={selectedSide} />
           </div>
 
-          <Countdown />
+          <Countdown selectedSide={selectedSide} />
 
           <div className="px-6">
 
             {/* Map Location */}
-            <MapLocation />
+            <MapLocation selectedSide={selectedSide} />
 
             {/* Invitation form */}
             <InvitationForm selectedSide={selectedSide} />
 
-            <WeddingFooter />
+            {/* <WeddingFooter /> */}
           </div>
         </div>
       </div>
