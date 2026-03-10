@@ -70,16 +70,20 @@ function CoupleInfo({ selectedSide }: CoupleInfoProps) {
         Lời mời cưới
       </h2>
       {/* Couple section */}
-      <div className="relative flex justify-center items-center gap-3 md:gap-12 lg:gap-16 mb-12 md:mb-16">
+      <div className="relative flex justify-center items-center  md:gap-12 lg:gap-1 mb-12 md:mb-16">
         {groomFirst ? Groom : Bride}
 
-        {/* Heart */}
+        {/* Heart - Tăng kích thước nhưng giữ nguyên layout */}
         <div
           className="flex items-center justify-center 
-                w-20 h-20 
+                w-40 h-40 
                 md:w-40 md:h-40 
                 lg:w-44 lg:h-44 
-                z-20 flex-shrink-0"
+                xl:w-64 xl:h-64
+                z-20 flex-shrink-0
+                -mx-9 md:mx-0
+                -mt-10 md:-mt-13
+                "
         >
           {loveAnimationData ? (
             <Lottie
