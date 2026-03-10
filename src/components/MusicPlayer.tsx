@@ -1,20 +1,53 @@
 import { useState, useRef, useEffect } from 'react';
 
 function MusicPlayer() {
-    const [isPlaying, setIsPlaying] = useState(true); 
+    const [isPlaying, setIsPlaying] = useState(true);
+    const [userInteracted, setUserInteracted] = useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
         if (audioRef.current) {
             audioRef.current.volume = 0.5;
-            // Tự động phát nhạc khi component mount
-            audioRef.current.play().catch((error) => {
-                console.log('Auto-play was prevented:', error);
-                // Nếu auto-play bị chặn, đặt lại trạng thái
-                setIsPlaying(false);
-            });
+
+            // Thử phát nhạc ngay lập tức
+            const tryAutoPlay = async () => {
+                try {
+                    await audioRef.current?.play();
+                    setIsPlaying(true);
+                } catch (error) {
+                    console.log('Auto-play was prevented:', error);
+                    setIsPlaying(false);
+                }
+            };
+
+            tryAutoPlay();
         }
-    }, []);
+
+        // Lắng nghe sự kiện tương tác đầu tiên của user
+        const handleFirstInteraction = async () => {
+            if (!userInteracted && audioRef.current) {
+                setUserInteracted(true);
+                try {
+                    await audioRef.current.play();
+                    setIsPlaying(true);
+                } catch (error) {
+                    console.log('Play failed:', error);
+                }
+            }
+        };
+
+        // Thêm event listeners cho nhiều loại tương tác
+        const events = ['click', 'touchstart', 'keydown', 'scroll', 'mousemove'];
+        events.forEach(event => {
+            document.addEventListener(event, handleFirstInteraction, { once: true });
+        });
+
+        return () => {
+            events.forEach(event => {
+                document.removeEventListener(event, handleFirstInteraction);
+            });
+        };
+    }, [userInteracted]);
 
     const toggleMusic = () => {
         if (audioRef.current) {
@@ -34,6 +67,9 @@ function MusicPlayer() {
             <audio
                 ref={audioRef}
                 loop
+                autoPlay
+                muted={false}
+                preload="auto"
                 src="/music/Sugar.mp3"
             />
 

@@ -1,43 +1,61 @@
-function WeddingFooter() {
+interface WeddingFooterProps {
+  selectedSide: "groom" | "bride";
+}
+
+function WeddingFooter({ selectedSide }: WeddingFooterProps) {
+  const groomFirst = selectedSide === "groom";
+  const coupleNames = groomFirst ? "Hải Long & Xuân Mai" : "Xuân Mai & Hải Long";
+
   return (
-    <footer className="mt-8 pt-6 border-t border-rose-200">
-      {/* Decorative hearts */}
-      <div className="flex justify-center gap-3 mb-4">
-        <span className="text-rose-400 text-xl animate-pulse">❤️</span>
-        <span className="text-rose-300 text-sm mt-1">✦</span>
-        <span className="text-rose-400 text-xl animate-pulse delay-100">💕</span>
-        <span className="text-rose-300 text-sm mt-1">✦</span>
-        <span className="text-rose-400 text-xl animate-pulse delay-200">❤️</span>
+    <footer className="mt-8 pt-6">
+      {/* Decorative line */}
+      <div className="flex justify-center items-center gap-3 mb-6">
+        <div className="w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-[#8B4513] to-[#8B4513]"></div>
+        <span className="text-[#8B4513] text-2xl">❀</span>
+        <div className="w-12 md:w-16 h-px bg-gradient-to-l from-transparent via-[#8B4513] to-[#8B4513]"></div>
       </div>
 
-      {/* Wedding date and message */}
-      <div className="text-center mb-4">
-        <h2 className="text-2xl font-serif text-rose-600 mb-2">
-          Happy Wedding
+      {/* Main message */}
+      <div className="text-center mb-6">
+        <h2
+          className="text-3xl md:text-4xl text-[#8B4513] mb-4"
+          style={{ fontFamily: "'Luxurious Script', cursive", fontWeight: 550 }}
+        >
+          Trân trọng cảm ơn
         </h2>
-        <p className="text-xl font-semibold text-rose-500 mb-3">
-          31/10/2025
-        </p>
-        <p className="text-rose-600 italic mb-4">
-          Hãy cùng nhau tạo nên những kỷ niệm đẹp trong ngày trọng đại này!
-        </p>
-      </div>
-
-      {/* Thank you message */}
-      <div className="text-center mb-4">
-        <p className="text-gray-600 text-sm italic">
+        <p
+          className="text-base md:text-lg text-[#2f2f2f] leading-relaxed"
+          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 550 }}
+        >
           Sự hiện diện của bạn là niềm vinh hạnh của chúng tôi
         </p>
       </div>
 
-      {/* Contact info */}
-      <div className="text-center text-gray-500 text-xs mb-4">
-        <p>Liên hệ: [Số điện thoại] | [Email]</p>
+      {/* Couple names */}
+      <div className="text-center mb-6">
+        <p
+          className="text-lg md:text-xl text-[#8B4513]"
+          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
+        >
+          {coupleNames}
+        </p>
+      </div>
+
+      {/* Bottom decorative line */}
+      <div className="flex justify-center items-center gap-3 mb-4">
+        <div className="w-8 md:w-12 h-px bg-gradient-to-r from-transparent via-[#b5851d] to-[#b5851d]"></div>
+        <span className="text-[#b5851d] text-xl">♥</span>
+        <div className="w-8 md:w-12 h-px bg-gradient-to-l from-transparent via-[#b5851d] to-[#b5851d]"></div>
       </div>
 
       {/* Copyright */}
-      <div className="text-center text-gray-400 text-xs">
-        <p>© 2025 - Made with love 💝</p>
+      <div className="text-center pb-4 mb-8">
+        <p
+          className="text-gray-500 text-sm"
+          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 400 }}
+        >
+          © 2026 - Made with love
+        </p>
       </div>
     </footer>
   );

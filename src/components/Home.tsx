@@ -13,7 +13,7 @@ interface HomeProps {
 
 function Home({ selectedSide, onBack }: HomeProps) {
   return (
-    <div className="w-full min-h-screen bg-white pt-0">
+    <div className="w-full min-h-screen bg-white pt-0 mb-8">
       {/* Back button */}
       <button
         onClick={onBack}
@@ -50,7 +50,7 @@ function Home({ selectedSide, onBack }: HomeProps) {
             {/* Invitation form */}
             <InvitationForm selectedSide={selectedSide} />
 
-            {/* <WeddingFooter /> */}
+            <WeddingFooter selectedSide={selectedSide} />
           </div>
         </div>
       </div>
