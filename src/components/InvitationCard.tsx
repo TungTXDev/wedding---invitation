@@ -375,7 +375,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
             <div className="h-px w-12 md:w-16 lg:w-20 bg-[#2f2f2f] flex-shrink-0" />
           </div>
 
-          <div className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-[#b5851d] font-black px-1 md:px-2 flex-shrink-0">
+          <div className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-[#b5851d] font-black px-1 md:px-2 flex-shrink-0 -mt-1.5 md:mt-0">
             {groomFirst ? "29.03" : "28.03"}
           </div>
 
