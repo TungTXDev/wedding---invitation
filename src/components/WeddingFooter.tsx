@@ -54,7 +54,7 @@ function WeddingFooter({ selectedSide }: WeddingFooterProps) {
           className="text-gray-500 text-sm"
           style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 400 }}
         >
-          © 2026 - Made with{" "}
+          © 2026 - Made by{" "}
           <a
             href="https://tung-tx-dev-portfolio-fe.vercel.app/"
             target="_blank"
