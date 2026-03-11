@@ -49,7 +49,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                     fontWeight: 550,
                   }}
                 >
-                  Mẹ: Nguyễn Kim Tuyến
+                  Mẹ: Ng Kim Tuyến
                 </p>
               </div>
               <div className="text-right">
@@ -78,7 +78,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                     fontWeight: 550,
                   }}
                 >
-                  Mẹ: Nguyễn Thị Hồng Yến
+                  Mẹ: Ng T Hồng Yến
                 </p>
               </div>
             </>
@@ -110,7 +110,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                     fontWeight: 550,
                   }}
                 >
-                  Mẹ: Nguyễn Thị Hồng Yến
+                  Mẹ: Ng T Hồng Yến
                 </p>
               </div>
               <div className="text-right">
@@ -139,7 +139,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                     fontWeight: 550,
                   }}
                 >
-                  Mẹ: Nguyễn Kim Tuyến
+                  Mẹ: Ng Kim Tuyến
                 </p>
               </div>
             </>
@@ -311,7 +311,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
               </>
             ) : (
               <>
-                Được tổ chức vào lúc <span className="font-black">11 giờ 00</span>
+                Vào lúc <span className="font-black">11 giờ 00</span>
               </>
             )}
           </p>
