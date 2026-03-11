@@ -5,7 +5,7 @@
  * 1. Tạo một Google Sheet mới (hoặc dùng sheet có sẵn)
  * 2. Vào Tools > Script Editor trong Google Sheets
  * 3. Xóa code mặc định và paste toàn bộ code này vào
- * 4. Thay thế 'YOUR_SHEET_ID' bằng Sheet ID của bạn (lấy từ URL: .../d/SHEET_ID/edit)
+ * 4. Thay thế 'YOUR_SHEET_ID' bằng Sheet ID của Quý vị (lấy từ URL: .../d/SHEET_ID/edit)
  * 5. Đặt tên cho sheet tab chứa dữ liệu là "Contact Form" (hoặc thay đổi trong code)
  * 6. Lưu project (Ctrl+S hoặc Cmd+S)
  * 7. Deploy > New deployment > Chọn "Web app"
@@ -18,8 +18,8 @@
  * - Dòng 2 trở đi: Dữ liệu từ form sẽ được thêm vào đây
  */
 
-// THAY ĐỔI SHEET_ID CỦA BẠN TẠI ĐÂY
-// THAY ĐỔI SHEET_ID CỦA BẠN TẠI ĐÂY
+// THAY ĐỔI SHEET_ID CỦA Quý vị TẠI ĐÂY
+// THAY ĐỔI SHEET_ID CỦA Quý vị TẠI ĐÂY
 const SHEET_ID = import.meta.env.VITE_APPS_SCRIPT_SHEETID; // Lấy từ URL Google Sheet
 
 /**

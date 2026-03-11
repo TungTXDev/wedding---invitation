@@ -24,7 +24,7 @@ function InvitationForm({ selectedSide }: InvitationFormProps) {
     setIsSubmitting(true);
 
     try {
-      const appsScriptUrl = import.meta.env.VITE_APPS_SCRIPT_URL;
+      const appsScriptUrl = (import.meta as any).env.VITE_APPS_SCRIPT_URL;
 
       const submitData = {
         side: selectedSide === 'groom' ? 'Groom' : 'Bride',
@@ -79,23 +79,64 @@ function InvitationForm({ selectedSide }: InvitationFormProps) {
 
           {/* Guest name */}
           <div>
-            <label htmlFor="guestName" className="block text-center text-[#8B4513] font-medium mb-2 mt-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>Tên khách mời</label>
-            <input type="text" id="guestName" name="guestName" value={formData.guestName} onChange={handleChange} placeholder="Nhập tên của bạn..." className="w-full px-5 py-3 border-2 border-[#8B4513] rounded-2xl text-[#8B4513] text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8B4513] bg-white" required />
+            <label
+              htmlFor="guestName"
+              className="block text-center text-[#8B4513] font-medium mb-2 mt-2"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Tên khách mời
+            </label>
+            <input
+              type="text"
+              id="guestName"
+              name="guestName"
+              value={formData.guestName}
+              onChange={handleChange}
+              placeholder="Nhập tên của Quý vị..."
+              className="w-full px-5 py-3 border-2 border-[#8B4513] rounded-2xl text-[#8B4513] text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8B4513] bg-white"
+              required
+            />
           </div>
 
           {/* Attendees */}
           <div>
-            <label htmlFor="attendees" className="block text-center text-[#8B4513] font-medium mb-2 mt-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>Số lượng tham dự</label>
-            <input type="text" inputMode="numeric" id="attendees" name="attendees" value={formData.attendees} onChange={handleChange} placeholder="Nhập số người tham dự..." className="w-full px-5 py-3 border-2 border-[#8B4513] rounded-2xl text-[#8B4513] text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8B4513] bg-white" required />
+            <label
+              htmlFor="attendees"
+              className="block text-center text-[#8B4513] font-medium mb-2 mt-2"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Số lượng tham dự
+            </label>
+            <input
+              type="text"
+              inputMode="numeric"
+              id="attendees"
+              name="attendees"
+              value={formData.attendees}
+              onChange={handleChange}
+              placeholder="Nhập số người tham dự..."
+              className="w-full px-5 py-3 border-2 border-[#8B4513] rounded-2xl text-[#8B4513] text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8B4513] bg-white"
+              required
+            />
           </div>
 
-          <button type="submit" className="w-full py-4 bg-[#8b0102] text-white rounded-2xl text-lg font-medium hover:bg-[#6b0101] transition-colors mt-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>Xác nhận tham dự</button>
+          <button
+            type="submit"
+            className="w-full py-4 bg-[#8b0102] text-white rounded-2xl text-lg font-medium hover:bg-[#6b0101] transition-colors mt-4"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            Xác nhận tham dự
+          </button>
         </form>
       ) : (
         <div className="text-center py-10">
           <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-4 animate-bounce">✓</div>
-          <p className="text-green-600 font-bold text-xl mb-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>Cảm ơn bạn!</p>
-          <p className="text-[#8B4513] text-base" style={{ fontFamily: "'Montserrat', sans-serif" }}>Chúng tôi rất vui khi có bạn tham dự</p>
+          <div className="flex justify-center mb-2">
+            <p className="text-green-600 font-bold text-xl whitespace-nowrap" style={{ fontFamily: "'Montserrat', sans-serif" }}>Cảm ơn Quý vị!</p>
+          </div>
+          <div className="flex justify-center">
+            <p className="text-sm sm:text-base md:text-lg text-[#8B4513] whitespace-nowrap" style={{ fontFamily: "'Montserrat', sans-serif" }}>Chúng tôi rất vui khi có Quý vị tham dự</p>
+          </div>
         </div>
       )}
 

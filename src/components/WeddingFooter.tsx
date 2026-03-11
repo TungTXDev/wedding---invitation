@@ -23,12 +23,14 @@ function WeddingFooter({ selectedSide }: WeddingFooterProps) {
         >
           Trân trọng cảm ơn
         </h2>
-        <p
-          className="text-base md:text-lg text-[#2f2f2f] leading-relaxed"
-          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 550 }}
-        >
-          Sự hiện diện của bạn là niềm vinh hạnh của chúng tôi
-        </p>
+        <div className="flex justify-center">
+          <p
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-[#2f2f2f] leading-relaxed whitespace-nowrap"
+            style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 550 }}
+          >
+            Sự hiện diện của Quý vị là niềm vinh hạnh của chúng tôi
+          </p>
+        </div>
       </div>
 
       {/* Couple names */}

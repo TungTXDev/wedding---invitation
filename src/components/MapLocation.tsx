@@ -14,7 +14,7 @@ function MapLocation({ selectedSide }: MapLocationProps) {
     : "Trống Đồng Palace";
 
   const mapUrl = groomFirst
-    ? "https://maps.app.goo.gl/xv8xJuv9Q9kb11kX7" // Bạn cần thay thế bằng link map thực của nhà trai
+    ? "https://maps.app.goo.gl/xv8xJuv9Q9kb11kX7" // Quý vị cần thay thế bằng link map thực của nhà trai
     : "https://maps.app.goo.gl/Mey7n3omcdGrSpQ66";
 
   const handleOpenMap = () => {

@@ -116,12 +116,14 @@ function AnimationIntro({ onComplete }: AnimationIntroProps) {
           >
             Thư mời tham dự lễ cưới
           </h1>
-          <p
-            className="text-sm md:text-xl text-gray-600 mt-1 px-4"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
-          >
-            Chúng tôi mong được đón tiếp bạn trong ngày cưới của mình
-          </p>
+          <div className="flex justify-center">
+            <p
+              className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mt-1 px-4 whitespace-nowrap"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Chúng tôi mong được đón tiếp Quý vị trong ngày cưới của mình
+            </p>
+          </div>
         </div>
 
         {/* ===== MOBILE CENTER / DESKTOP CENTER ===== */}
