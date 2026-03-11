@@ -159,7 +159,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
           className="text-center text-lg md:text-2xl text-[#8B4513] mb-10"
           style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 550 }}
         >
-          Bạn và gia đình tới dự lễ cưới của chúng tôi
+          Quý vị tới dự lễ cưới của chúng tôi
         </p>
 
         {/* Couple names with double happiness */}
