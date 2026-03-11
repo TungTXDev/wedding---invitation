@@ -148,44 +148,56 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
 
         {/* Main title */}
         <h2
-          className="text-center text-4xl md:text-6xl lg:text-7xl text-[#8B4513] mb-6"
+          className="text-center text-4xl md:text-6xl lg:text-7xl text-[#8B4513] mb-2 md:mb-4"
           style={{ fontFamily: "'Luxurious Script', cursive", fontWeight: 550 }}
         >
           Trân trọng kính mời
         </h2>
 
         {/* Subtitle */}
-        <p
-          className="text-center text-lg md:text-2xl text-[#8B4513] mb-10"
-          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 550 }}
-        >
-          Quý vị tới dự lễ cưới của chúng tôi
-        </p>
+        <div className="flex justify-center mb-5 md:mb-10">
+          <p
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#8B4513] whitespace-nowrap"
+            style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 550 }}
+          >
+            Quý vị tới dự lễ cưới của chúng tôi
+          </p>
+        </div>
 
         {/* Couple names with double happiness */}
-        <div className="flex items-center justify-center gap-6 md:gap-12 mb-10">
+        <div className="flex items-center justify-center gap-6 md:gap-12 mb-5 md:mb-8">
           {groomFirst ? (
             <>
-              <div className="text-center">
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Vũ
-                </p>
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000]"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Hải Long
-                </p>
-                {/* <p
+              <div className="flex items-center justify-center gap-8 md:gap-16 lg:gap-21">
+                <div className="text-center">
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Vũ
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Hải
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000]"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Long
+                  </p>
+                  {/* <p
                   className="text-base md:text-lg text-[#000000] mt-2"
                   style={{
                     fontFamily: "'Montserrat', sans-serif",
@@ -194,32 +206,41 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                 >
                   Quý nam
                 </p> */}
-              </div>
+                </div>
 
-              <div className="text-5xl md:text-5xl lg:text-7xl text-[#8B4513] font-black">
-                囍
-              </div>
+                <div className="text-5xl md:text-5xl lg:text-7xl text-[#8B4513] font-black">
+                  囍
+                </div>
 
-              <div className="text-center">
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Tạ
-                </p>
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000]"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Xuân Mai
-                </p>
-                {/* <p
+                <div className="text-center">
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Tạ
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Xuân
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000]"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Mai
+                  </p>
+                  {/* <p
                   className="text-base md:text-lg text-[#000000] mt-2"
                   style={{
                     fontFamily: "'Montserrat', sans-serif",
@@ -228,30 +249,42 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                 >
                   Quý nữ
                 </p> */}
+                </div>
               </div>
             </>
           ) : (
             <>
-              <div className="text-center">
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Tạ
-                </p>
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000]"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Xuân Mai
-                </p>
-                {/* <p
+              <div className="flex items-center justify-center gap-8 md:gap-16 lg:gap-21">
+
+                <div className="text-center">
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Tạ
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Xuân
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000]"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Mai
+                  </p>
+                  {/* <p
                   className="text-base md:text-lg text-[#000000] mt-2"
                   style={{
                     fontFamily: "'Montserrat', sans-serif",
@@ -260,32 +293,41 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                 >
                   Quý nữ
                 </p> */}
-              </div>
+                </div>
 
-              <div className="text-5xl md:text-7xl lg:text-7xl text-[#8B4513] font-black">
-                囍
-              </div>
+                <div className="text-5xl md:text-7xl lg:text-7xl text-[#8B4513] font-black">
+                  囍
+                </div>
 
-              <div className="text-center">
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Vũ
-                </p>
-                <p
-                  className="text-3xl md:text-6xl lg:text-7xl text-[#000000]"
-                  style={{
-                    fontFamily: "'Luxurious Script', cursive",
-                    fontWeight: 550,
-                  }}
-                >
-                  Hải Long
-                </p>
-                {/* <p
+                <div className="text-center">
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Vũ
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000] mb-2"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Hải
+                  </p>
+                  <p
+                    className="text-4xl md:text-6xl lg:text-7xl text-[#000000]"
+                    style={{
+                      fontFamily: "'Luxurious Script', cursive",
+                      fontWeight: 550,
+                    }}
+                  >
+                    Long
+                  </p>
+                  {/* <p
                   className="text-base md:text-lg text-[#000000] mt-2"
                   style={{
                     fontFamily: "'Montserrat', sans-serif",
@@ -294,13 +336,14 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
                 >
                   Quý nam
                 </p> */}
+                </div>
               </div>
             </>
           )}
         </div>
 
         {/* Time block styled like reference */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-2">
           <p
             className="text-lg md:text-2xl text-[#2f2f2f] tracking-wide uppercase"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}
@@ -351,7 +394,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
           </div>
         </div>
 
-        <div className="text-center mb-10">
+        <div className="text-center mb-4">
           <p
             className="text-sm md:text-base text-[#2f2f2f] italic"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
@@ -364,7 +407,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
         </div>
 
         {/* Venue */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <p
             className="text-sm md:text-3xl text-[#b5851d] font-black uppercase"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -387,14 +430,14 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
 
         {/* Bottom title */}
         <h3
-          className="text-center text-3xl md:text-5xl lg:text-6xl text-[#8B4513] mb-4"
+          className="text-center text-3xl md:text-5xl lg:text-6xl text-[#8B4513] mb-2"
           style={{ fontFamily: "'Luxurious Script', cursive", fontWeight: 550 }}
         >
           Rất hân hạnh được đón tiếp!
         </h3>
 
         {/* Decorative bottom elements */}
-        <div className="flex justify-center items-center gap-3 mt-6">
+        <div className="flex justify-center items-center gap-3">
           <div className="w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-rose-300 to-rose-300"></div>
           <span className="text-rose-500 text-2xl md:text-3xl">♥</span>
           <div className="w-12 md:w-16 h-px bg-gradient-to-l from-transparent via-rose-300 to-rose-300"></div>
