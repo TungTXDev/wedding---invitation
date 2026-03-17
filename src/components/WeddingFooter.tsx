@@ -23,9 +23,9 @@ function WeddingFooter({ selectedSide }: WeddingFooterProps) {
         >
           Trân trọng cảm ơn
         </h2>
-        <div className="flex justify-center">
+        <div className="flex justify-center px-4">
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-[#2f2f2f] leading-relaxed whitespace-nowrap"
+            className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#2f2f2f] leading-relaxed whitespace-nowrap"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 550 }}
           >
             Sự hiện diện của Quý vị là niềm vinh hạnh của chúng tôi
