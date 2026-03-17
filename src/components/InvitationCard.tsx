@@ -418,7 +418,7 @@ function InvitationCard({ selectedSide }: InvitationCardProps) {
             }
           </p>
           <p
-            className="text-base md:text-base text-[#2f2f2f] mt-2 leading-relaxed"
+            className="text-xs sm:text-sm md:text-base lg:text-xs xl:text-sm text-[#2f2f2f] mt-2 leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}
           >
             {groomFirst
