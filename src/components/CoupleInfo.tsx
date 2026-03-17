@@ -81,7 +81,7 @@ function CoupleInfo({ selectedSide }: CoupleInfoProps) {
                 lg:w-44 lg:h-44 
                 xl:w-64 xl:h-64
                 z-20 flex-shrink-0
-                -mx-9 md:mx-0
+                -mx-9 md:mx-0 lg:-mx-8
                 -mt-10 md:-mt-13
                 "
         >
